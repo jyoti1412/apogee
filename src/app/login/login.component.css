@@ -1,0 +1,39 @@
+html,
+::ng-deep body {
+    height: 100% !important;
+}
+/* ::ng-deep html {
+    display: table  !important;
+    margin: auto  !important;
+} */
+::ng-deep .loginbody {
+    display: table-cell  !important;
+    vertical-align: middle  !important;
+}
+
+
+
+.invalid-login {
+    
+    /* font-size: 80% !important; */
+    color: #dc3545 !important;
+}
+
+#login-page{
+    width: 320px;
+    margin-top: 7rem;
+}
+
+.row button{
+    background-color: #808080 !important;
+}
+
+
+.input-field  .pt-5, .py-5 {
+    padding-top: 1rem!important;
+}
+
+
+#login-page .row{
+    margin-bottom: 0px !important;
+}

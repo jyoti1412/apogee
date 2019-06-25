@@ -1,0 +1,83 @@
+.page-title-border{
+  
+    margin-bottom: 15px;
+    /* padding-top: 15px; */
+    border-bottom: 2px solid #ccc;
+}
+
+.page-title{
+    font-size: 24px !important;
+  
+    color: #293b44;
+    font-weight: 600;
+}
+
+.btn-lg{
+
+padding: 0.4rem 0.5rem;
+    font-size: 0.25rem;
+    line-height: 1.5;
+    border-radius: 1.3rem;
+    background-color: gray;
+    float: right;
+}
+.modal-dialog{
+    max-width: 82%;
+    margin-left: 13.5rem;
+    margin-top: 5.2rem;
+}
+
+#buttons{
+    display: flex;
+}
+#submit{
+    float: right;
+    background: darkgray;
+    color: white;
+   
+   
+}
+
+#cancel{
+
+    background: darkgray;
+    color: white;
+  
+    
+}
+
+button:hover{
+background-color: #293b44;
+   
+}
+/* #addGroupForm{
+    margin-left: 50rem;
+}  */
+
+#myModal{
+    top: 4.5rem;
+    /* min-height: 100%; */
+    /* position: absolute; */
+    /* bottom: 29px; */
+    /* background-color: tan; */
+    /* width: 86%;
+    left: 14rem; */
+}
+.modal-dialog{
+    max-width: 100%;
+   margin: 0rem auto; 
+   max-height: fit-content;
+}
+.form-group .row{
+    margin-bottom: 0px;
+}
+
+#sectonrow{
+    width: 125%;
+    padding: 20px;
+     } 
+     .btn-floating i {
+        background: gray;
+    }
+
+ 

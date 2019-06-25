@@ -1,0 +1,60 @@
+/* .card-header{
+    text-align: center;
+    font-size: 16px;
+    background-color: #00acc1 !important;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 0rem;
+}
+
+.card-content {
+    text-align: center;
+}
+.cyan {
+    background-color: #00bcd4 !important;
+}
+
+.bg-primary{
+    background-color: #00bcd4 !important;
+}
+.card .card-content {
+    padding: 0px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1px;
+ 
+ }
+ .grid-container .card:first-child {
+    grid-column: span 2;
+ 
+ } */
+
+ .col-12 .col-md-6{
+text-align: center;
+ }
+
+ .card-stats-title{
+     color: white;
+ }
+ .card-stats-number{
+     color:white;
+     font-size: 19px;
+     font-weight: 500;
+ }
+ .card-body {
+   
+    padding: .25rem;
+}
+.card-header{
+    background-color: transparent !important;
+}
+
+.card-content{
+    text-align: center;
+    padding: 0px;
+} 
+

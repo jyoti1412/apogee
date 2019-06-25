@@ -1,0 +1,19 @@
+
+#login-page{
+    width: 320px;
+    /* margin-top: 7rem; */
+}
+
+.row button{
+    background-color: #808080 !important;
+}
+
+
+.input-field  .pt-5, .py-5 {
+    padding-top: 1rem!important;
+}
+
+
+#login-page .row{
+    margin-bottom: 0px !important;
+}

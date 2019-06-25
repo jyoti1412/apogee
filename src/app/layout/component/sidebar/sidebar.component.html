@@ -1,0 +1,282 @@
+ <!-- <div class="wrapper">
+     
+        <nav id="sidebar">
+        
+          <header>
+            <img src="assets/images/icon.png">
+          </header>
+          <ul class="list-unstyled components">
+          
+            <li class="active">
+
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+                            <i class="material-icons">home</i>
+                            <span class="nav-text">International Airport</span>
+                        </a>
+              
+              <ul class="collapse list-unstyled" id="homeSubmenu">
+                <li><a routerLink="/dashboard" [routerLinkActive]="['router-link-active']">
+                        <i class="material-icons">keyboard_arrow_right</i>
+                        <span>Terminal 1</span>
+                      
+                    </a></li>
+                <li><a href="#">
+                        <i class="material-icons">keyboard_arrow_right</i>
+                        <span>Terminal 1</span>
+                       
+                    </a></li>
+              
+              </ul>
+            </li>
+            <li>
+           
+              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"><i class="material-icons">settings</i>setting</a>
+              <ul class="collapse list-unstyled" id="pageSubmenu" style="    margin-left: -20px;">
+                    <li> 
+                      <a routerLink="/organization" routerLinkActive="active">
+                        <i class="material-icons">people</i>
+                        <span>organization</span>
+                     
+                    </a>
+                    
+                    </li>
+                    <li> <a routerLink="/roles" routerLinkActive="active"><i class="material-icons">perm_contact_calendar</i>Roles</a></li>
+                    <li> <a routerLink="/user" routerLinkActive="active" ><i class="material-icons">person</i>Users</a></li>
+                 
+                    <li> <a routerLinkActive="active" routerLink="/location"><i class="material-icons">location_on</i>Location </a></li>
+                    <li> <a routerLinkActive="active" routerLink="/alert"><i class="material-icons">notifications</i>Alert History </a></li>
+                    <li> <a routerLinkActive="active" routerLink="/communication"><i class="material-icons">question_answer</i>Communication History </a></li>
+              </ul>
+            </li>
+           
+          </ul>
+      
+          
+        </nav>
+      
+    
+        <div id="content">
+      
+          <nav class="navbar navbar-default" style="position: relative;
+          bottom: 13em;
+          left: 13em;
+          background: transparent;
+          box-shadow: none;">
+            <div class="container-fluid">
+      
+              <div class="navbar-header" style="background: none; box-shadow: none;">
+                <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                        <i class="material-icons">
+                                menu
+                                </i>
+                                  </button>
+
+
+              </div>
+      
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#">Page</a></li>
+                  <li><a href="#">Page</a></li>
+                  <li><a href="#">Page</a></li>
+                  <li><a href="#">Page</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+      
+    
+        </div>
+      </div> -->
+
+  
+<!-- 
+    <md-sidenav-container>
+      <md-sidenav #sidenav [opened]="screenWidth > 840" [mode]="(screenWidth > 840) ? 'side' : 'over'">
+        <div class="sidenav-header">
+          <a routerLink="/"><h5>Hello world!</h5></a>
+        </div>
+      </md-sidenav>
+    
+      <div [ngStyle]="{'display' : (screenWidth > 840) ? 'none' : 'block'}">
+        <button type="button" md-button (click)="sidenav.open()">
+          Toggle sidenav when display is block
+        </button>
+      </div>
+    
+      <router-outlet></router-outlet>
+    
+    </md-sidenav-container> -->
+
+    <div id="wrapper">
+
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <img src="assets/images/icon.png">
+          </div>
+          <ul class="sidebar-nav">
+            <li class="active">
+             
+              <a  href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+                  <!-- class="collapsible-header waves-effect waves-cyan" -->
+                <i class="material-icons">home</i>
+                <span class="nav-text">International Airport</span>
+            </a>
+  
+            <ul class="collapse list-unstyled" id="homeSubmenu">
+              <li><a routerLink="/dashboard" [routerLinkActive]="['router-link-active']">
+                      <i class="material-icons">keyboard_arrow_right</i>
+                      <span class="nav-text">Terminal 1</span>
+                    
+                  </a></li>
+              <li><a href="#">
+                      <i class="material-icons">keyboard_arrow_right</i>
+                      <span class="nav-text">Terminal 2</span>
+                     
+                  </a></li>
+            
+            </ul>
+  
+            </li>
+            <li>
+              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"><i class="material-icons">settings</i><span class="nav-text">Setting</span></a>
+                <ul class="collapse list-unstyled" id="pageSubmenu" >
+                      <li> 
+                        <a routerLink="/organization" routerLinkActive="active">
+                          <i class="material-icons">people</i>
+                          <span class="nav-text">organization</span>
+                       
+                      </a>
+                      
+                      </li>
+                      <li> <a routerLink="/roles" routerLinkActive="active"><i class="material-icons">perm_contact_calendar</i><span class="nav-text">Roles</span></a></li>
+                      <li> <a routerLink="/user" routerLinkActive="active" ><i class="material-icons">person</i><span class="nav-text">Users</span></a></li>
+                   
+                      <li> <a routerLinkActive="active" routerLink="/location"><i class="material-icons">location_on</i><span class="nav-text">Location</span> </a></li>
+                      <li> <a routerLinkActive="active" routerLink="/alert"><i class="material-icons">notifications</i><span class="nav-text">Alert History</span> </a></li>
+                      <li> <a routerLinkActive="active" routerLink="/communication"><i class="material-icons">question_answer</i><span class="nav-text">Communication History </span></a></li>
+                </ul>
+            </li>
+           
+          </ul>
+        </aside>
+      
+        <div id="navbar-wrapper">
+          <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a href="#" data-activates="slide-out" id="sidebar-toggle" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light  gradient-45deg-light-green gradient-shadow">
+                  <i id ="menu-iconn" class="material-icons">menu</i>
+                </a>
+  
+           
+               <ul class="nav" style=" position: absolute;
+                left: 70rem; top:0px;">
+                   
+                    <li class="dropdown" >
+                        <a id="drop1">
+                           <img class="flag-icon" src="assets/images/us (2).svg">
+                        </a>
+                       <ul  id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                         <li  role="presentation">
+                                <a href="#!" class="grey-text text-darken-1">
+                                    <img class="flag-icon" src="assets/images/us (2).svg"> US English</a>
+                         </li>
+                       </ul>
+                    </li>
+                   
+                    <li class="dropdown">
+                        <a id="drop2">
+                            <i class="material-icons"  style="  margin-right: 0rem;
+                            font-size: 24px;
+                            color:white;">notifications
+                                <small class="notification-badge">5</small>
+                            </i>
+                        </a>
+                        <ul  id="menu2" class="dropdown-menu" role="menu" aria-labelledby="drop2">
+                            <li  role="presentation" class="menu-item1">
+                                <h6>NOTIFICATIONS
+                                    <span class="new badge">5</span>
+                                </h6>
+                            </li>
+                           
+                            <li class="divider"></li>
+                            
+                            <li  role="presentation" class="menu-item1">
+                              
+                                    <a href="#!" class="grey-text text-darken-2">
+                                        <span id="menu-material" class="material-icons icon-bg-circle cyan small">add_shopping_cart</span> A new
+                                        order has been placed!
+                                    </a>
+                                    <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">2 hours ago</time>
+                             
+                         </li>
+                         <li  role="presentation" class="menu-item1">
+                           
+                                <a href="#!" class="grey-text text-darken-2">
+                                    <span id="menu-material" class="material-icons icon-bg-circle red small">stars</span> Completed the task
+                                </a>
+                                <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">3 days ago</time>
+                            
+                     </li>
+                     <li  role="presentation" class="menu-item1">
+                     
+                            <a href="#!" class="grey-text text-darken-2">
+                                <span id="menu-material" class="material-icons icon-bg-circle teal small">settings</span> Settings updated
+                            </a>
+                            <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">4 days ago</time>
+                       
+                 </li>
+                 <li  role="presentation" class="menu-item1">
+                  
+                        <a href="#!" class="grey-text text-darken-2">
+                            <span id="menu-material" class="material-icons icon-bg-circle deep-orange small">today</span> Director
+                            meeting started
+                        </a>
+                        <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">6 days ago</time>
+                  
+             </li>
+  
+                          </ul>
+                      
+                    </li>
+  
+              <li class="dropdown">
+               <a id="drop3">
+                 <img class="flag-icon" src="assets/images/avatar-7.png" style="width: 1.7em;">
+               </a>
+  
+               <ul  id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop3">
+                  <li  role="presentation">
+                         <a href="#!" class="grey-text text-darken-1">
+                            <i class="material-icons">face</i> profile</a>
+                  </li>
+                  <li  role="presentation">
+                      <a href="#!" class="grey-text text-darken-1">
+                          <i class="material-icons">settings</i>setting</a>
+               </li>
+               <li  role="presentation">
+                  <a href="#!" class="grey-text text-darken-1">
+                      <i class="material-icons">live_help</i> Help</a>
+           </li>
+           <li  role="presentation">
+              <a href="#!" class="grey-text text-darken-1">
+                  <i class="material-icons">keyboard_tab</i> Logout</a>
+       </li>
+                </ul>
+  
+              </li>                                
+  
+                  
+                </ul>  
+  
+              
+  
+  
+              </div>
+            </div>
+          </nav>
+        </div>
+    
+      
+      </div>

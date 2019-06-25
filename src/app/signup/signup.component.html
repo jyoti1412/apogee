@@ -1,0 +1,77 @@
+
+<div id="login-page" class="row">
+  <div class="col s12 z-depth-4 card-panel">
+    <form [formGroup]="signupForm" (ngSubmit)="onRegister()" class="login-form">
+      <div class="row">
+        <div class="input-field col s12 center">
+          <img src="assets/images/logo1.png" alt="" class="responsive-img valign">
+          <p class="center login-form-text"><b>Cloud Dashboard</b></p>
+        </div>
+      </div>
+      <div class="row margin">
+        <div class="input-field col s12">
+          <i class="material-icons prefix pt-5">group</i>
+          <input id="group_name" type="text" formControlName="organizationName"
+            [ngClass]="{ 'invalid-login': submitted && f.organizationName.errors }">
+          <label for="group_name" class="center-align">Organization Name</label>
+          <div *ngIf="submitted && f.organizationName.errors" class="invalid-login center-align">
+            <div *ngIf="f.organizationName.errors.required">Organization name is required</div>
+          </div>
+        </div>
+      </div>
+      <div class="row margin">
+        <div class="input-field col s12">
+          <i class="material-icons prefix pt-5">person_outline</i>
+          <input id="username" type="text" formControlName="username"
+            [ngClass]="{ 'invalid-login': submitted && f.username.errors }">
+          <label for="username" class="center-align">Username</label>
+          <div *ngIf="submitted && f.username.errors" class="invalid-login center-align">
+            <div *ngIf="f.username.errors.required">Username is required</div>
+          </div>
+        </div>
+      </div>
+      <div class="row margin">
+        <div class="input-field col s12">
+          <i class="material-icons prefix pt-5">email</i>
+          <input id="email" type="email" formControlName="email"
+            [ngClass]="{ 'invalid-login': submitted && f.email.errors }">
+          <label for="email" class="center-align">Email</label>
+          <div *ngIf="submitted && f.email.errors" class="invalid-login center-align">
+            <div *ngIf="f.email.errors.required">Email is required</div>
+            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+          </div>
+        </div>
+      </div>
+      <div class="row margin">
+        <div class="input-field col s12">
+          <i class="material-icons prefix pt-5">phone</i>
+          <input id="phone_no" type="text" formControlName="phoneNumber"
+            [ngClass]="{'invalid-login': submitted && f.phoneNumber.errors}">
+          <label for="phone_no">Phone Number</label>
+          <div *ngIf="submitted && f.phoneNumber.errors" class="invalid-login center-align">
+            <div *ngIf="f.phoneNumber.errors.required">Phone number is required</div>
+            <div *ngIf="f.phoneNumber.errors.minlength">Phone number must be at least 10 digit</div>
+          </div>
+        </div>
+      </div>
+      <div class="row margin">
+        <div class="input-field col s12">
+          <i class="material-icons prefix pt-5">description</i>
+          <input id="group_desc" type="text" formControlName="description">
+          <label for="group_desc">Organization Description</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <button [disabled]="loading" class="btn waves-effect waves-light grey_btn col s12">Register</button>
+        </div>
+      </div>
+    </form>
+    <div class="row">
+      <div class="input-field col s12" style="margin-bottom: 10px; margin-top: 10px !important;">
+        <p class="margin center medium-small sign-up">Already have an account? <a routerLink="/login">Login</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

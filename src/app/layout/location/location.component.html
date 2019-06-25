@@ -1,0 +1,212 @@
+
+  <div id="jsgridgroup" class="section">
+      <div class="row">
+         <div class="col s12 m12 l12">
+             <div class="col s8 m8 l8 ">
+                 <h4 class="left page-title">Location</h4>
+               </div>
+               <div class="col s2 m2 l3 " id="addRoleForm">
+                 <a class="btn-floating btn-small waves-effect waves-light circle_btn right" data-toggle="modal" data-target="#myModal">
+                   <i class="material-icons">add</i>
+                 </a>
+               </div>
+               <div class="col s2 m2 l1 " id="downloadRoles">
+                 <a class="btn-floating btn-small waves-effect waves-light circle_btn right">
+                   <i class="material-icons">get_app</i>
+                 </a>
+               </div>
+         </div>
+        
+      </div>
+      <div class="row">
+         <div class="col s12 m12 l12 ">
+             <div class="page-title-border"></div>
+         </div>
+      </div>
+         <div class="row">
+         
+   
+   
+           <div class="col s12 m12 l12">
+   
+               <!-- <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+                   <thead>
+                     <tr>
+                        <th>Location Name</th>
+                    <th>Location Alias</th>
+                     <th>Gateway</th>
+                               <th>Action</th>
+      
+                      
+                     </tr>
+                   </thead>
+                   <tbody>
+                     <tr *ngFor="let person of persons">
+                        <td>{{ person.Username }}</td>
+                        <td>{{ person.Firstname }}</td>
+                        <td>{{ person.Lastname }}</td>
+                        <td>{{ person.Rolename }}</td>
+                   
+                     </tr>
+                   </tbody>
+                   </table> -->
+
+                   <table  class="row-border hover"  datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="display" style="width:100%">
+                      <thead>
+                        <tr>
+                            <th>Location Name</th>
+                            <th>Location Alias</th>
+                             <th>Gateway</th>
+                                       <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>Location 1</td>
+                              <td>Location1</td>
+                              <td>Fan1</td>
+                              <td><i class="material-icons" style="color: #2f90b2;font-size: 17px; cursor:pointer;">
+                                  edit </i>
+                                <i class="material-icons" style="color: #cc0033;font-size: 17px;cursor:pointer;">delete</i></td>
+                            </tr>
+                       
+        
+                            <tr>
+                                <td>Location 1</td>
+                                <td>Location1</td>
+                                <td>Fan1</td>
+                                <td><i class="material-icons" style="color: #2f90b2;font-size: 17px; cursor:pointer;">
+                                    edit </i>
+                                  <i class="material-icons" style="color: #cc0033;font-size: 17px;cursor:pointer;">delete</i></td>
+                              </tr>
+                      
+                              <tr>
+                                  <td>Location 1</td>
+                                  <td>Location1</td>
+                                  <td>Fan1</td>
+                                  <td><i class="material-icons" style="color: #2f90b2;font-size: 17px; cursor:pointer;">
+                                      edit </i>
+                                    <i class="material-icons" style="color: #cc0033;font-size: 17px;cursor:pointer;">delete</i></td>
+                                </tr>
+                      </tbody>
+                    </table>
+   
+            
+             
+           </div>
+         </div>
+         <div class="divider"></div>
+       </div>
+   
+
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+  
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+          <h4 class="modal-title">Add Location</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+      </div>
+      <div class="modal-body">
+          <form class="form-horizontal" action="/action_page.php">
+            <div class="form-group">
+              
+              <div class="col-sm-12">
+                <input type="email" class="form-control" id="email" placeholder="Location Name" name="email">
+              </div>
+            </div>
+            <div class="form-group">
+           
+              <div class="col-sm-12">          
+                <input type="password" class="form-control" id="pwd" placeholder="Location Alias" name="pwd">
+              </div>
+            </div>
+
+            <div class="form-group">
+               
+                <div class="col-sm-12">          
+                  <div class="row s12 m12 l12">
+                    <div class=" input-field col s4 m4 l4" style="margin-top: 11px;">
+                      <label for="role_desc">Gateway</label>
+                    </div>
+                    <div class="col s8 m8 l8">
+                      <mz-select-container>
+                        <select multiple mz-select
+                        
+                          [placeholder]="'choose your option'"
+                          style="display: none;">
+                          <optgroup>
+                            <option data-icon="assets/select-icon-1.jpg" class="left circle">Fan1</option>
+                            <option data-icon="assets/select-icon-2.jpg" class="left circle">Fan2</option>
+                       
+                            <option data-icon="assets/select-icon-3.jpg" class="left circle">Fan1 3</option>
+                          </optgroup>
+                        </select>
+                      </mz-select-container>
+                      
+                    </div>
+                  </div>
+
+
+                </div>
+
+                
+              </div>
+
+            
+
+           <div class="form-group">
+           
+                <div class="col-sm-12">          
+                    <mz-checkbox-container>
+                        <input mz-checkbox
+                          [label]="'set as deafault'"
+                          id="checkbox-id"
+                          type="checkbox">
+                      </mz-checkbox-container>
+                </div>
+              </div>
+
+
+              <!--
+              <div class="form-group">
+           
+                  <div class="col-sm-12">          
+                    <input type="password" class="form-control" id="pwd" placeholder="Phone Number" name="pwd">
+                  </div>
+                </div>
+
+                
+                <div class="form-group">
+           
+                    <div class="col-sm-12">          
+                      <input type="password" class="form-control" id="pwd" placeholder="Organization Description" name="pwd">
+                    </div>
+                  </div>
+ -->
+
+
+            <div class="form-group">        
+              <div class="col-sm-12" id="buttons">
+                  <div class="col-sm-6">
+                <button type="submit" class="btn btn-default" id="submit">Submit</button>
+              </div>
+                <div class="col-sm-6">
+                <button type="submit" class="btn btn-default" id="cancel">cancel</button>
+              </div>
+              </div>
+            </div>
+
+            
+          </form>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div> -->
+    </div>
+    
+  </div>
+</div>
+

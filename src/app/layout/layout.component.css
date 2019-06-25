@@ -1,0 +1,9 @@
+::ng-deep body{
+    display: block  !important;
+    width: 100% !important;
+}
+
+::ng-deep html {
+    /* display: block !important; */
+    margin: auto  !important;
+}

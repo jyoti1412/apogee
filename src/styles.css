@@ -1,1 +1,93 @@
 /* You can add global styles to this file, and also import other style files */
+#card_container{
+width: 82%;
+
+position: relative;
+right: 0;
+left: 8rem;
+top:4rem;
+}
+
+
+.dataTables_length>label {
+    font-size: 15px!important;
+    color: #0c0101!important;
+    margin-right: .5em!important;
+}
+
+.dataTables_wrapper .dataTables_length {
+    float: left;
+}
+
+@media only screen and (max-width: 640px)
+{
+#card_container {
+    width: 90%;
+
+position: relative;
+right: 0;
+left: 0;
+top:4rem;
+}
+}
+/* @media only screen and (max-width: 640px)
+{
+.sidebar-brand img{
+position: fixed;
+left: 23rem;
+width: 7%;
+}
+} */
+
+.dataTables_length select{
+    background-color: aliceblue;
+    width: 35%;
+    padding: 0px;
+    border-radous: 2px;
+    border-radius: 2px;
+    height: 24px;
+}
+
+.dataTables_filter label {
+    font-size: 15px!important;
+    color: #0c0101!important;
+    margin-right: .5em!important;
+    float: left;
+}
+
+.dataTables_wrapper .dataTables_filter label input {
+    background-color: transparent;
+    border: 1px solid #9e9e9e;
+    border-radius: 1px;
+    outline: none;
+    height: 1.5rem;
+    width: 76%;
+    font-size: 1rem;
+   margin: 0px 2px 20px 4px;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    transition: all 0.3s;
+}
+@media screen and (max-width: 640px){
+.dataTables_wrapper .dataTables_filter {
+  
+    margin-left: 3.5em;
+}
+}
+
+#jsgridgroup .row{
+    margin-bottom: 0px;
+}
+
+
+@media only screen and (max-width: 768px)
+{
+#card_container {
+    width: 85%;
+    position: relative;
+    right: auto;
+    left: auto;
+    top: 4rem;
+}
+}

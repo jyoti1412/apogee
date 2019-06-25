@@ -1,0 +1,60 @@
+
+<div id="login-page" class="row">
+  <div class="col s12 z-depth-4 card-panel">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+      <div class="row">
+        <div class="input-field col s12 center">
+          <img src="assets/images/logo1.png" alt="" class="responsive-img valign"> 
+          <p class="center login-form-text"><b>Cloud Dashboard</b></p>
+        </div>
+      </div>
+      <div class="row margin">
+        <div class="input-field col s12">
+          <i class="material-icons prefix pt-5">person_outline</i>
+          <input id="username" type="text" placeholder="Username" formControlName="username" [ngClass]="{ 'invalid-login': submitted && f.username.errors }" />
+          <!-- <label for="username" class="center-align">Username</label> -->
+          <div *ngIf="submitted && f.username.errors" class="invalid-login center-align">
+            <div *ngIf="f.username.errors.required">Username is required</div>
+          </div>
+        </div>
+      </div>
+      <div class="row margin">
+        <div class="input-field col s12" style="margin-top:-11px;">
+          <i class="material-icons prefix pt-5">lock_outline</i>
+          <input [type]="show ? 'text' : 'password'"  id="password" type="password" placeholder="Password" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+          <!-- <label for="password">Password</label> -->
+          <div *ngIf="submitted && f.password.errors" class="invalid-login center-align">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+          </div>
+        </div>
+        <div class=" input-field s2">
+          <i class="material-icons  prefix pt-5" style="margin-left: -40px; cursor: pointer; margin-top: -15px;" (click)="password()">
+            visibility </i>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m12 l12 ml-2 mt-3">
+          <input type="checkbox" id="remember-me" />
+          <label for="remember-me">Remember me</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <a routerLink="/dashboard"><button [disabled]="loading" class="btn waves-effect waves-light grey_btn col s12">Login</button></a>
+        </div>
+      </div>
+    </form>
+    <div class="row">
+      <div class="input-field col s6 m6 l6" style="margin-bottom: 10px; margin-top: 10px !important;">
+        <p class="margin medium-small">
+          <a routerLink="/signup"  style="color: gray;">Register Now</a></p>
+      </div>
+      <div class="input-field col s6 m6 l6" style="margin-bottom: 10px; margin-top: 10px !important;">
+  <p class="margin right-align medium-small" ><a
+            href="../apogeeTheme/materialize-admin/html/collapsible-menu/user-forgot-password.html"  style="color: gray;">Forgot password </a>
+        </p> 
+      </div>
+    </div>
+  </div>
+</div>

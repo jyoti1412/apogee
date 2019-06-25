@@ -1,0 +1,201 @@
+
+
+
+<div id="jsgridgroup" class="section">
+    <!-- <div class="divider"></div> -->
+    <!--Basic Scenario-->
+
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <div class="col s8 m8 l8 ">
+              <h5 class="left page-title">Organizations</h5>
+            </div>
+            <div class="col s2 m2 l3 " id="addGroupForm">
+              <a class="btn-floating btn-small waves-effect waves-light circle_btn right" data-toggle="modal" data-target="#myModal">
+                <i class="material-icons">add</i>
+              </a>
+             
+            </div>
+            <div class="col s2 m2 l1 " id="downloadRoles">
+              <a class="btn-floating btn-small waves-effect waves-light circle_btn right">
+                <i class="material-icons">get_app</i>
+              </a>
+            </div>
+          </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m12 l12 ">
+            <div class="page-title-border"></div>
+          </div>
+    </div>
+    <div class="row">
+     
+      
+  
+      <div class="col s12 m12 l12">
+     
+          <table   class="row-border hover"  datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="display" style="width:100%">
+              <thead>
+                <tr>
+                    <th>Organization Name</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Organization Description</th>
+                    <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                 
+
+											<td>Organization 1</td>
+											<td>Lacey</td>
+											<td>test@test.com</td>
+											<td>1234567890</td>
+											<td>Sample Description</td>
+											<td><i class="material-icons" style="color: #2f90b2;font-size: 17px; cursor:pointer;">
+												edit </i>
+											<i class="material-icons" style="color: #cc0033;font-size: 17px;cursor:pointer;">delete</i></td>
+									
+                </tr>
+               
+
+                  <tr>
+											<td>Organization 2</td>
+											<td>Angelica Ramos</td>
+											<td>Angelica@test.com</td>
+											<td>4567895632</td>
+											<td>Junior Technical Author</td>
+											<td><i class="material-icons" style="color: #2f90b2;font-size: 17px; cursor:pointer;">
+												edit </i>
+                      <i class="material-icons" style="color: #cc0033;font-size: 17px;cursor:pointer;">delete</i>
+                    </td>
+										</tr>
+              
+                    <tr>
+                        <td>Organization 3</td>
+                        <td>Ashton Cox</td>
+                        <td>Ashton@test.com</td>
+                        <td>1234567890</td>
+                        <td>Sample Description</td>
+                        <td><i class="material-icons" style="color: #2f90b2;font-size: 17px; cursor:pointer;">
+                          edit </i>
+                      
+                          <button
+                          class="btn btn-default"
+                          mwlConfirmationPopover
+                          [popoverTitle]="popoverTitle"
+                          [popoverMessage]="popoverMessage"
+                          placement="left"
+                          (confirm)="confirmClicked = true"
+                          (cancel)="cancelClicked = true">
+                          Click me!
+                        </button>
+                          <i class="material-icons" style="color: #cc0033;font-size: 17px;cursor:pointer;"(click)="openModal(template)">delete</i>
+                      </td>
+                      </tr>
+                
+              </tbody>
+            </table>
+
+    
+
+        <!-- <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+            <thead>
+              <tr>
+                  <th>Organization Name</th>
+                  <th>Username</th>
+                  <th>Email</th>
+                  <th>Phone Number</th>
+                  <th>Organization Description</th>
+                  <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let person of persons">
+                  <td>{{ person.organizationname }}</td>
+      <td>{{ person.useranme }}</td>
+      <td>{{ person.email}}</td>
+      <td>{{ person.phonenumber}}</td>
+      <td>{{ person.organizatioDesc}}</td>
+        
+              </tr>
+            </tbody>
+            </table> -->
+        <!-- <div class="dataTables_info" id="example_info" role="status" aria-live="polite">Showing 1 to 8 of 8 entries</div><div class="dataTables_paginate paging_simple_numbers" id="example_paginate"><a class="paginate_button previous disabled" aria-controls="example" data-dt-idx="0" tabindex="0" id="example_previous">Previous</a><span><a class="paginate_button current" aria-controls="example" data-dt-idx="1" tabindex="0">1</a></span><a class="paginate_button next disabled" aria-controls="example" data-dt-idx="2" tabindex="0" id="example_next">Next</a></div></div> -->
+     
+        </div>
+    </div>
+    <div class="divider"></div>
+
+  </div>
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+    
+      <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">Add Organization</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+ 
+        </div>
+        <div class="modal-body">
+            <form class="form-horizontal" action="/action_page.php">
+              <div class="form-group">
+                
+                <div class="col-sm-12">
+                  <input type="email" class="form-control" id="email" placeholder="Organization name" name="email">
+                </div>
+              </div>
+              <div class="form-group">
+             
+                <div class="col-sm-12">          
+                  <input type="password" class="form-control" id="pwd" placeholder="User Name" name="pwd">
+                </div>
+              </div>
+
+              <div class="form-group">
+             
+                  <div class="col-sm-12">          
+                    <input type="password" class="form-control" id="pwd" placeholder="Email" name="pwd">
+                  </div>
+                </div>
+
+                <div class="form-group">
+             
+                    <div class="col-sm-12">          
+                      <input type="password" class="form-control" id="pwd" placeholder="Phone Number" name="pwd">
+                    </div>
+                  </div>
+
+                  
+                  <div class="form-group">
+             
+                      <div class="col-sm-12">          
+                        <input type="password" class="form-control" id="pwd" placeholder="Organization Description" name="pwd">
+                      </div>
+                    </div>
+  
+
+
+              <div class="form-group">        
+                <div class="col-sm-12" id="buttons">
+                    <div class="col-sm-6">
+                  <button type="submit" class="btn btn-default" id="submit">Submit</button>
+                </div>
+                  <div class="col-sm-6">
+                  <button type="submit" class="btn btn-default" id="cancel">cancel</button>
+                </div>
+                </div>
+              </div>
+
+              
+            </form>
+        </div>
+      
+      </div>
+      
+    </div>
+  </div>
+ 
