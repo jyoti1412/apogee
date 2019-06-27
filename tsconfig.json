@@ -16,7 +16,7 @@
     ],
     "types": [
       "jquery",
-     "materialize-css"
+      "materialize-css"
     ],
     "lib": [
       "es2018",
